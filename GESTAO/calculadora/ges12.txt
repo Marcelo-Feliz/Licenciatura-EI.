@@ -1,0 +1,59 @@
+Calculo Financeiro
+
+RJS:
+Ct=Co+J
+Co=Ct+J
+J=Ct-C0
+J=Co*i*t
+
+Capitalizacao
+Ct=Co(1+i*t)
+Atualizacao
+Co=Ct(1-i*t)
+
+RJC:
+Ct=Co+J
+Co=Ct+J
+J=Ct-C0
+J=Co[(1+i)**t-1]
+
+Capitalizacao
+Ct=Co(1+i)**t
+Atualizacao
+Co=Ct(1-i)**-t
+------------------------
+Eq tx RJS:
+
+i=taxa do periodo maior
+i'=taxa do periodo menor
+
+m=(periodo da taxa maior/
+periodo da taxa menor)
+
+i= i'*m
+i'=i/m
+
+Eq tx RJS:
+
+i=(1+i')**m-1
+i'=(1+i)**(1/m)-1
+
+Nominal para efeitava-RJS
+Nominal para nominal-RJC
+Efetiva para efetiva-RJC
+----------------------
+Taxa media RJS
+
+i={(Co1*i1*t1)+(Co2*i2*t2)]/
+[(co1*t1)+ (Co2*t2)]
+-------------------------------
+Val= -investimento+Co
+
+TIR(Val=0)
+i2-taxa maior
+i1- taxa menor
+Val2- val com a taxa i2
+Val1- val com a taxa i1
+
+i2-i1------ Val2-Val1
+Tir-i1----- 0-Val1

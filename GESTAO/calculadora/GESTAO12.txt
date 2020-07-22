@@ -1,0 +1,32 @@
+Modelo da quantidade
+óptima de encomenda
+--------------------
+
+S – custo unitário 
+de encomenda
+
+c – custo unitário 
+de aquisicao
+
+i – custo unit. de 
+posse em % por 
+unid tempo
+
+D – procura anual
+
+Q – quant. de 
+encomenda
+--------------------
+
+Custo de encomenda =
+D.S/Q
+
+Custo de posse =
+i.c.Q/2
+
+Custo Total = 
+D.S/Q + i.c.Q/2
+
+
+Qopt = raiz
+(2.D.S/i.c)

@@ -1,0 +1,36 @@
+M -> Margem de
+Contribuicao
+
+V -> volume de 
+vendas em valor
+
+Cv -> custos 
+variaveis
+
+M=V-Cv
+
+
+Re -> resultado 
+esperado
+
+Cf -> custos fixos
+
+Ct -> custos totais
+
+Re=V-Cv-Cf
+Re=V-Ct
+
+
+Q* -> quantidade 
+critica
+
+V* -> valor 
+critico
+--------------------
+Q*=Cf/(pv-cv)
+Pv -> preco de venda
+unitarios
+cv -> custo variavel
+unitario
+
+V*=pv.Q*

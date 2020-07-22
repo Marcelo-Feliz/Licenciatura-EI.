@@ -1,0 +1,64 @@
+liquidez geral = 
+ativo corrente/
+passivo corrente
+
+liquidez reduzida = 
+(ativo corrente - 
+inventarios)/
+passivo corrente
+
+liquidez imediata = 
+caixa ou 
+depositos bancarios/
+passivo corrente
+
+liquidez financeira=
+capitais propios/
+capitais alheios
+
+liquidez financeira=
+capitais proprios/
+ativo total
+
+solvabilidade = 
+ativo/passivo
+
+rotacao das materias
+primas = 
+consumo anual de 
+materias primsa / 
+stock medio de 
+materias primas
+
+prazo medio de 
+recebimentos = 
+saldo medio de
+credito a clientes /
+vendas anuais 
+liquidas
+
+prazo medio de
+pagamentos = 
+saldo medio dos 
+fornecedores/compras
+
+rotacao dos capitais
+= vendas anuais
+liquidas / capitais
+proprios
+
+rendibilidade das
+vendas = resultado
+liquido do exercicio
+/ vendas liquidas
+
+rendibilidade dos
+capitais proprios =
+resustado liquido
+do exercicio / 
+capitais proprios
+
+rendibilidade do
+investimento total =
+resultado liquido do
+exercicio / ativo

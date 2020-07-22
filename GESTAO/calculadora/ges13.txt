@@ -1,0 +1,44 @@
+Contabilidade de Gestao
+
+CI-Custo industrial
+MD-Materias Diretas
+MOD-Mao-de-Obra Direta
+GGF-Gastos Gerais de Fabrico
+
+Custo primo=MD+MOD
+Custo de trans.=MOD+GGF
+
+CIPA-Custo industrial da
+producao acabada
+CIPV- Custo industrial da
+producao vendidas
+CNI-Custos nao industriais
+
+Custo do produto=CIPA
+Custo do periodo=CIPV+CNI
+
+CI=MPC(materias primas)+MOD+
+GGF
+
+CIPA=CI+EIPVF-EFPVF
+
+Resultado bruto=Vendas-
+CIPV
+
+Resultado corrente=Vendas-
+CIPV-CNI
+------------------------------------
+CV= Custo variavel
+CF= Custo fixo
+V=Valor de venda
+Re=Resultado esperado
+Q*=Ponto critico de vendas
+pu=preco unitario
+pvu=preco variavel unitario
+V*=Valor critico de vendas
+
+Re=V-CV-CF
+Q*= Cf/(pu-pvu)
+
+Margem segurança=((Q-Q*)/Q*)*100
+

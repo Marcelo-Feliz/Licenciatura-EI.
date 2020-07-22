@@ -1,0 +1,32 @@
+Analise Econimica = rendibilidade da empresa.
+Analise Financeira = se o uso dos meios financeiros é adequado ao desenvolvimento estavel e comprimisso com exterior.
+
+Principio equilibrio financeiro:
+-Ativo = investimentos
+-Capital Proprio + Passivo = Origem de fundos ou financiamento
+
+Ativo nao corrente <= Capital Permanentes
+Ativo corrente >= Passivo Corrente
+
+Fundo de Maneio = Ativo corrente - Passivo Corrente
+Fundo de Maneio Capitais Permanentes - Ativo nao corrente
+
+Racio de Liquidez = dao ideia da capacidade de uma empresa satisfazer a curto prazo os compromissos
+-Liquidez geral(pagar a curto prazo) = Ativo Corrente/Passivo Corrente
+-Liquidez Reduzida(solver sem gnd riscos) = (Ativo Corrente - Inventarios)/Passivo Corrente
+-Liquidez Imediata(pagar de imediato) = Caixa/Passivo Corrente
+
+Racio de Solvabilidade = se a empresa financiou com capitais proprios ou alheios
+-Autonomia Financeira = Capital Proprio/Capitais alheios ou Capitais proprios/Ativo Total
+-Solvabilidade = Ativo / Passivo, potencial para gerar fundos face aos compromissos
+
+Racio Atividade/Funcionamento = forma como a empresa ta a usar os recursos que dispoe
+-Rot. Materia = Consumo anual materias/stock medio materias
+-Prazo med. recebimentos = Saldo medio de credito aos clientes/Vendas Anuais Liquidas * 365
+-Praz med. pagamentos = saldo medio fornecdeores/compras *365
+-Rot dos Capitais = Vendas Anuais Liquidas/Capitais Proprios
+
+Racio Rendabilidade = grau de eficiencia
+-Rendabiliade de vendas = Resultado Liquido/Vendas Liquidas
+-Rendabilidade de Capitais = REsultado liquido/Capitais Proprios
+-Rendabilidade de Investimento total = Resultado Liquido/Ativo

@@ -1,0 +1,58 @@
+custo industrial(CI)
+= materias diretas
+(MD) + mao de obra
+(MOD) + gastos 
+gerais de fabrico
+(GGF)
+
+Custo primo = 
+MD + MOD
+
+Custo de 
+transformacao = 
+MOD + GGF
+
+custos nao 
+industriais = 
+custos de 
+distribuicao
+custos 
+administrativos
+custos financeiros
+
+custo completivo = 
+custos industriais +
+custos nao 
+industriais
+
+custo economico
+tecnico = 
+custos industriais +
+custos nao
+industriais + 
+encargos figurativos
+
+CIPA -> custo
+industrial da 
+producao acabada
+
+CIPV -> custo
+industrial da 
+producao vendida
+
+CNI -> custos nao
+industriais
+
+CIPA -> CI
+
+EfPA = CIPA - CIPV
+
+custo do periodo =
+CIPV + CNI
+
+resultado do periodo
+ºREsultado bruto = 
+vendas - CIPV
+ºResultado corrente=
+resultado bruto +
+CNI
