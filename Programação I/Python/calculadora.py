@@ -1,0 +1,12 @@
+num1 = int(input('1º numero'))
+num2 = int(input('2º numero'))
+soma = num1 + num2
+dif = num1 - num2
+prod = num1 * num2
+div = num1 / num2
+resto = num1 % num2
+print('Soma=',soma)
+print('Diferença=',dif)
+print('Produto=',prod)
+print('Divisão=',div)
+print('Resto=',resto)
