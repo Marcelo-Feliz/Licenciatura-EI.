@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script>
+function draw_physmodel(context, model) {
+
+    context.beginPath();
+    context.rect(model.min_x,model.min_y, model.max_x,model.max_y);
+    context.closePath();
+    context.fillStyle = "black";
+    context.fill();
+
+    context.beginPath();
+    context.arc(model.x, model.y, model.r, 0, 2 * Math.PI);
+    context.closePath();
+    context.fillStyle = "red";
+    context.fill();
+
+}
+
+function main() {
+    var context = document.getElementById("acanvas").getContext("2d");
+
+    //
+    //      INIT MODEL
+    var model = {
+        x: 64, y: 64,           //      POSITION
+        vx: 0, vy: 0,           //      VELOCITY
+        ax: 0, ay: 0,           //      ACCELERATION
+        r: 16,                  //      RADIUS
+        min_x: 0, max_x: 256,   //      BOUNDS: X
+        min_y: 0, max_y: 256,   //      BOUNDS: Y
+        G: 0.25E-3, K: 0.8      //      PHYSICS CONSTANTS
+    };
+    //
+    //      ANIMATION STEP
+    var start = performance.now();      // Record time of animation start
+    var previous = performance.now();   // Record time of previous step
+    physdemo_step = function (timestamp) {
+        var dt = timestamp - previous;  // Time since the previous step
+        previous = timestamp;           // Record time of this step
+        //
+        //      ACCELERATION UPDATE
+        if (timestamp - start < 1000.0) {
+            model.ax = 2.0 * model.G;   // INITIAL KICK
+        } else {
+            model.ax = 0.0;
+        }
+        //
+        model.ay = model.G;             // GRAVITY
+        //
+        //      VELOCITY UPDATE
+        model.vx = model.vx + model.ax * dt;
+        model.vy = model.vy + model.ay * dt;
+        //
+        //      POSITION UPDATE
+        model.x = model.x + model.vx * dt;
+        model.y = model.y + model.vy * dt;
+        //
+        //      COLLISIONS UPDATE
+        if (model.x - model.r < model.min_x) { model.vx = -model.K * model.vx; model.x = model.min_x + model.r; }
+        if (model.x + model.r > model.max_x) { model.vx = -model.K * model.vx; model.x = model.max_x - model.r; }
+        if (model.y - model.r < model.min_y) { model.vy = -model.K * model.vy; model.y = model.min_y + model.r; }
+        if (model.y + model.r > model.max_y) { model.vy = -model.K * model.vy; model.y = model.max_y - model.r; }
+        //
+        //      DRAW UPDATED MODEL
+        draw_physmodel(context, model);
+        //
+        //      LOOP ANIMATION
+        requestAnimationFrame(physdemo_step);
+    }
+    //
+    //      LOOP ANIMATION
+    requestAnimationFrame(physdemo_step);
+}
+
+
+
+        </script>
+    </head>
+    <body onload="main();">
+        <canvas id="acanvas" width="1000" height="1000"0></canvas>
+    </body>
+</html>

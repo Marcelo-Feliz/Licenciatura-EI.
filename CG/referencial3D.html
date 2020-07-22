@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Extrusões e Reticulados X3D</title>
+    <script type='text/javascript' src='lib/x3dom/x3dom-full.js'>
+    </script>
+    <link rel='stylesheet' type='text/css' href='lib/x3dom/x3dom.css' />
+</head>
+
+<body>
+
+    <h1 id="Topo"><a class="sitea" href="../index.html">Computação Gráfica</a></h1>
+
+    <x3d width="512px" height="512px">
+        <scene>
+
+            <Transform translation="1 0 0" rotation="0 0 1 1.57">
+                <Shape id="x">
+                    <Appearance>
+                        <TwoSidedMaterial diffuseColor="red"></TwoSidedMaterial>
+                    </Appearance>
+                    <cylinder bottom='true' height='2.0' radius='0.1' top='true'></cylinder>
+                </Shape>
+                </Transform>
+
+                <Transform translation="0 1 0">
+                    <Shape id="y">
+                        <Appearance>
+                            <TwoSidedMaterial diffuseColor="green"></TwoSidedMaterial>
+                        </Appearance>
+                        <cylinder bottom='true' height='2.0' radius='0.1' top='true'></cylinder>
+                    </Shape>
+                </Transform>
+
+                <Transform translation="0 0 1" rotation="1 0 0 1.57">
+                    <Shape id="z">
+                        <Appearance>
+                            <TwoSidedMaterial diffuseColor="blue"></TwoSidedMaterial>
+                        </Appearance>
+                        <cylinder bottom='true' height='2.0' radius='0.1' top='true'></cylinder>
+                    </Shape>
+                </Transform>
+
+                <ImageTexture url="media/textura1.jpg">
+                </ImageTexture>
+                <background skyColor="0.9375 0.8984 0.5469">
+                    <!-- khaki -->
+                </background>
+
+
+
+               
+        </scene>
+    </x3d>
+</body>
+
+</html>

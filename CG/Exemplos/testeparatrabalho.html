@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script>
+function main() {
+    var ctx = document.getElementById("acanvas").getContext("2d");
+  
+  
+  var model = {
+        x: 0, y: 240,           //      POSITION
+        vx: 0.1, vy: 0,           //      VELOCITY
+        ax: 0, ay: 0,           //      ACCELERATION
+        r: 16,                  //      1.6 * Math.PI
+        min_x: 0, max_x: 256,   //      BOUNDS: X
+        min_y: 0, max_y: 256,   //      BOUNDS: Y
+        G: -0.25E-4, K: 0.8      //      PHYSICS CONSTANTS
+    };
+ 
+  
+    ctx.fillStyle = "orange";
+    ctx.beginPath();
+    ctx.moveTo(model.x-20,model.y+30+1.6 * Math.PI);
+    ctx.lineTo(model.x-20,model.y+30+10-1.6 * Math.PI);
+    ctx.quadraticCurveTo(model.x-20,model.y+30+10,model.x-20+1.6 * Math.PI,model.y+30+10);
+    ctx.lineTo(model.x-20+18-1.6 * Math.PI,model.y+30+10);
+    ctx.quadraticCurveTo(model.x-20+18,model.y+30+10,model.x-20+18,model.y+30+10-1.6 * Math.PI);
+    ctx.lineTo(model.x-20+18,model.y+30+1.6 * Math.PI);
+    ctx.quadraticCurveTo(model.x-20+18,model.y+30,model.x-20+18-1.6 * Math.PI,model.y+30);
+    ctx.lineTo(model.x-20+1.6 * Math.PI,model.y+30);
+    ctx.quadraticCurveTo(model.x-20,model.y+30,model.x-20,model.y+30+1.6 * Math.PI);
+    ctx.fill();
+}
+    
+</script>
+    </head>
+    <body onload="main();">
+        <canvas id="acanvas" width="1000" height="1000"0></canvas>
+    </body>
+</html>
+
+  
+
+
+
+
+ctx.beginPath();
+ctx.moveTo(50,50);
+ctx.lineTo(50,20);
+ctx.quadraticCurveTo(65,30,75,15);
+ctx.quadraticCurveTo(75,30,100,20);
+ctx.lineTo(100,50);
+ctx.fillStyle = "red";
+ctx.fill();
+
+
+
+
+ctx.beginPath();
+ctx.moveTo(50,50);
+ctx.lineTo(50,20);
+ctx.quadraticCurveTo(50,0,75,15);
+ctx.quadraticCurveTo(100,0,100,20);
+ctx.lineTo(100,50);
+ctx.fillStyle = "red";
+ctx.fill();
+
+
+
+
+
+ctx.beginPath();
+ctx.arc(model.x, model.y, model.r, 0, 2 * Math.PI);
+ctx.closePath();
+ctx.fillStyle = "red";
+ctx.fill();
+
+
+ctx.fillStyle = "orange";
+ctx.beginPath();
+ctx.moveTo(model.x,model.y+1.6 * Math.PI);
+ctx.lineTo(model.x,model.y+10-1.6 * Math.PI);
+ctx.quadraticCurveTo(model.x,model.y+10,model.x+1.6 * Math.PI,model.y+10);
+ctx.lineTo(model.x+20-1.6 * Math.PI,model.y+10);
+ctx.quadraticCurveTo(model.x+20,model.y+10,model.x+20,model.y+10-1.6 * Math.PI);
+ctx.lineTo(model.x+20,model.y+1.6 * Math.PI);
+ctx.quadraticCurveTo(model.x+20,model.y,model.x+20-1.6 * Math.PI,model.y);
+ctx.lineTo(model.x+1.6 * Math.PI,model.y);
+ctx.quadraticCurveTo(model.x,model.y,model.x,model.y+1.6 * Math.PI);
+ctx.fill();
+
+
+
+ctx.fillStyle = "orange";
+ctx.beginPath();
+ctx.moveTo(model.x+10,model.y+1.6 * Math.PI);
+ctx.lineTo(model.x+10,model.y+10-1.6 * Math.PI);
+ctx.quadraticCurveTo(model.x+10,model.y+10,model.x+10+1.6 * Math.PI,model.y+10);
+ctx.lineTo(model.x+10+20-1.6 * Math.PI,model.y+10);
+ctx.quadraticCurveTo(model.x+10+20,model.y+10,model.x+10+20,model.y+10-1.6 * Math.PI);
+ctx.lineTo(model.x+10+20,model.y+1.6 * Math.PI);
+ctx.quadraticCurveTo(model.x+10+20,model.y,model.x+10+20-1.6 * Math.PI,model.y);
+ctx.lineTo(model.x+10+1.6 * Math.PI,model.y);
+ctx.quadraticCurveTo(model.x+10,model.y,model.x+10,model.y+1.6 * Math.PI);
+ctx.fill();

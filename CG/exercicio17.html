@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script>
+function main() {
+ 
+    pixeis = 1000;
+    nlados=5
+
+    var canvas = document.getElementById("acanvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = pixeis;
+    canvas.height = pixeis;
+
+    ctx.beginPath();
+    ctx.arc(250, 250, 100, 0, 2 * Math.PI,);
+    ctx.lineWidth = 1;
+    ctx.closePath();
+    ctx.stroke();
+    
+    tamanhoangulo=360/nlados;
+    
+
+
+    ctx.beginPath();
+
+    ctx.closePath();
+    ctx.fillStyle = "black";
+    ctx.fill();
+
+
+    ctx.beginPath();
+
+    ctx.closePath();
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+
+}
+        </script>
+    </head>
+    <body onload="main();">
+        <canvas id="acanvas" width="10000" height="10000"0></canvas>
+    </body>
+</html>

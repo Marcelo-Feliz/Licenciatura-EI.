@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Extrusões e Reticulados X3D</title>
+    <script type='text/javascript' src='lib/x3dom/x3dom-full.js'>
+    </script>
+    <link rel='stylesheet' type='text/css' href='lib/x3dom/x3dom.css' />
+</head>
+
+<body>
+
+    <h1 id="Topo"><a class="sitea" href="../index.html">Computação Gráfica</a></h1>
+
+    <x3d width="512px" height="512px">
+        <scene>
+            <background skyColor="0.9375 0.8984 0.9000">
+                <!-- khaki -->
+            </background>
+            <switch whichChoice="-1">
+
+                <indexedfaceset id="bow" coordIndex="
+          1 2 3 4 1  -1
+          0 2 1 0 -1
+          0 3 2 0 -1
+          0 4 3 0 -1
+          0 1 4 0 -1" 
+          
+          texCoordIndex="
+          0 1 3 2 0 -1
+          0 1 3 0 -1
+          0 1 3 0 -1
+          0 1 3 0 -1
+          0 1 3 0 -1">
+
+                    <coordinate point="
+          0 3 0.
+          -1 0 -1.
+          1 0 -1.
+          1 0 1.
+          -1 0 1">
+                    </coordinate>
+                    <TextureCoordinate point="
+                    0.00 0.00
+                    0.25 0.00
+                    0.00 0.33
+                    0.25 0.33
+                    0.50 0.33
+                    0.75 0.33
+                    1.00 0.33
+                    0.00 0.66
+                    0.25 0.66
+                    0.50 0.66
+                    0.75 0.66
+                    1.00 0.66
+                    0.00 1.00
+                    0.25 1.00">
+                    </TextureCoordinate>
+                </indexedfaceset>
+            </switch>
+            <transform id="boat">
+                <transform translation="0 0 0" scale="1 1 1">
+                    <shape>
+                        <appearance>
+                                <ImageTexture url="lib/media/textura1.jpg">
+                                </ImageTexture>
+                        </appearance>
+                        <x3dgeometrynode use="bow"></x3dgeometrynode>
+                    </shape>
+                </transform>
+            </transform>
+        </scene>
+    </x3d>
+</body>
+
+</html>
