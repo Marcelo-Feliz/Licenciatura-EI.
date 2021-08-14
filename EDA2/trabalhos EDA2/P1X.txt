@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <math.h>
+//Problema 2 Factores
+int nprimos(unsigned long int x) //FUNCAO QUE CALCULA QUANTOS FACTORES TEM UM DETERMINADO NUMERO
+{
+    unsigned long int n=0,copyx=x; //copyx vai guardar a variavel
+    unsigned long int limite = sqrt(x);
+
+    if(x>1) // numero 0 e 1 tÃÂªm 0 como resposta
+    {
+        if((x%2)>0)
+        {
+            for(unsigned long int i=3;i<(limite)+1;i=i+2)// se for numero impar verifica-se ate metade do X com i de 2 em 2
+            {
+                while(copyx%i==0)
+                {
+                    n++;
+                    copyx=copyx/i;
+                    printf(" %lu",i);
+                    if(copyx==1)
+                    {
+                        printf("\n");
+                        return 0;
+                    }
+                    limite = sqrt(copyx);
+                }
+            }
+            if (n == 0) // porque ÃÂ© primo
+            {
+                printf(" %lu",x);
+            }
+            if(n>0)
+            {
+                printf(" %lu",copyx);
+            }
+            printf("\n");
+            return 0;
+        }
+        limite=x/2;
+        while(copyx%2==0)
+        {
+            n++;
+            copyx=copyx/2;
+            printf(" 2");
+            limite=sqrt(copyx);
+            if(copyx==1)
+            {
+                printf("\n");
+                return 0;
+            }
+        }
+        for(unsigned long int i=3;i<(limite)+1;i=i+2)// se for numero par verifica-se ate metade do X
+        {
+            while(copyx%i==0)
+            {
+                n++;
+                copyx=copyx/i;
+                printf(" %lu",i);
+                if(copyx==1)
+                {
+                    printf("\n");
+                    return 0;
+                }
+                limite=sqrt(copyx);
+            }
+        }
+        if (n == 0) //  excecao do "2"
+        {
+            printf(" %lu\n",x);
+        }
+        if(n>0)
+        {
+            printf(" %lu\n",copyx);
+        }
+        return 0; 
+    }
+    printf("\n");; // ASSUMIMOS QUE O NUMERO 0 TEM 0 FACTORES
+    return 0;
+}
+
+int listaN(int x) //lÃÂª o input e guarda em a[]
+{
+    unsigned long int a;
+    for (int i=0;i<x;i++)
+    {
+        scanf("%lu", &a);
+        printf("%lu:",a);
+        nprimos(a);
+    }
+
+    return 0;
+}
+
+int main(void)
+{   
+    int n; //quantidade de linhas
+    scanf("%d\n", &n); //scan da quantidade de linhas para ler
+    listaN(n);
+    return 0;
+}

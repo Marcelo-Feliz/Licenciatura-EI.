@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <string.h>
+
+
+struct AFD
+{
+   int NEstados; //numero de estados
+   int NSimbolos; // numero de simbolos
+   int EInicial; // estado inicial do autÃ³mato
+   int NEAceitacao; //numero de estados de aceitacao
+   int EAceitacao[100]; //estados de aceitaÃ§Ã£o;
+   int Matriz[100][27];
+}AFD_N[20];
+
+int resolve(int t,int inicial,int a, char palavra[],int letra)
+{
+    if(letra==t)
+    {
+        for(int i=0;i<AFD_N[a].NEAceitacao;i++)
+        {
+            if(inicial==AFD_N[a].EAceitacao[i])
+            {
+                printf("\"%s\" aceite\n",palavra);
+                return 1;
+            }
+        }
+        printf("\"%s\" rejeitada\n",palavra);
+        return 0;  
+    }
+    
+    for(int i=0;i<t+1;i++)
+    {
+        for(int j=0;j<AFD_N[a].NSimbolos;j++)
+        {
+            if(j==(palavra[letra])-97)
+            {
+                inicial = AFD_N[a].Matriz[inicial][j];
+
+                resolve(t,inicial,a,palavra,letra+1);
+                return 0;
+            }
+        }
+        printf("\"%s\" rejeitada\n",palavra);
+        return 0; 
+    }
+return 0;
+}
+
+int main(void)
+{   
+    int NAFD;
+    int a;
+    char palavra[129];
+    int tamanho;
+    //le e guarda quantos automatos existem
+    scanf("%d", &NAFD);
+
+    for(int i=0;i<NAFD;i++)
+    {
+        // le e guarda a info dos automatos
+        scanf("%d", &a);
+        AFD_N[i].NEstados=a;
+        scanf("%d", &a);
+        AFD_N[i].NSimbolos=a;
+        scanf("%d", &a);
+        AFD_N[i].EInicial=a;
+
+        // le e guarda os estados de aceitacao
+        scanf("%d", &a);
+        AFD_N[i].NEAceitacao=a;
+        for(int p=0;p<AFD_N[i].NEAceitacao;p++)
+        {
+            scanf("%d", &a);
+            AFD_N[i].EAceitacao[p]=a;
+        }
+        // le e guarda as transicoes
+        for(int k=0;k<AFD_N[i].NEstados;k++)
+        {
+            for(int j=0;j<AFD_N[i].NSimbolos;j++){
+                scanf("%d", &a);
+                AFD_N[i].Matriz[k][j]=a;
+            }
+        }
+    }
+    while(scanf("%s", palavra) != EOF)
+    {
+        a=palavra[0]-48;
+        scanf("%s", palavra);
+        tamanho = strlen(palavra);
+
+        int inicial = AFD_N[a].EInicial;
+        palavra[tamanho-1]='\0';
+        
+        resolve(tamanho-1,inicial,a,palavra,0);
+        
+
+    }
+
+   
+
+
+
+    
+
+
+
+    return 0;
+}
