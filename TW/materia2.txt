@@ -1,0 +1,92 @@
+
+Controlador
+Servelt  é uma classe Java usada para estender as funcionalidades de um servidor. 
+Servlets são geridas pelos containers
+serve para atenter pedidos get ou post
+
+
+Visao
+JavaServer Pages (JSP) é uma tecnologia que ajuda os desenvolvedores de software 
+	a criarem páginas web geradas dinamicamente baseadas em HTML, XML ou outros 
+	tipos de documentos.
+
+Modelo
+JavaBeans são componentes de software escritos na linguagem de programação Java
+
+
+
+
+javax.servlet
+	Interface Servlet:
+		–Métodos init(), service(), destroy()
+
+init() destroy() Ciclo de vida da Servet 
+			Para gerir recursos usados
+
+Os métodos doGet() e doPost() têm dois argumentos:
+	HttpServletRequest
+	HttpServletResponse
+
+Ciclo de vida da Servlet
+Métodos invocados automaticamente:
+
+public void init():
+	Inicialização do objeto servlet
+	Configurações, ligação a BD...
+
+public void service():
+	Invocado a cada pedido
+	Em HTTP, chama doGet ou doPost
+
+public void destroy():
+	Na finalização da servlet
+		Libertar recursos
+		Fechar ligação a BD ou outras...
+
+Representam propriedades a considerar no server-side
+●Há 3 âmbitos
+	Da aplicação
+		Têm a ver com a aplicação
+		Guardados num objeto ServletContext
+		Disponíveis para todas as servlets
+Da sessão
+	Pode ser consultados em múltiplos pedidos
+	Guardados num objeto HttpSession
+	Ativos enquanto a sessão estiver ativa
+Do pedido
+	Disponíveis apenas durante o atendimento do pedido
+
+
+Programação para uso de uma Base de Dados:
+●Explícita: com a programação da ligação, e todas as leituras, escritas...
+●Implícita: via ferramentas que simplificam o desenvolvimento, escondendo o detalhe de operações comuns
+
+
+
+
+framework
+Opinionated vs unopinionated: tem ou não recomendações sobre como resolver um problema em particular? Os frameworks opinionated podem ser mais produtivos em tarefas comuns específicas, mas menos flexíveis noutras ocasiões.
+
+
+Batteries included vs get it yourself: inclui bibliotecas que podem resolver todos os problemas com uma abordagem “por omissão”; ou que requerem o desenvolvimento e/ou integração de bibliotecas externas.
+
+escolha de um framework
+Desempenho
+Suporte para Cache
+Escalabilidade
+Segurança
+
+
+
+
+.jsp
+templates
+
+Object-Relational Mapping (ORM)
+Há um mapeamento entre objetos (e propriedades) e o esquema de uma BD relacional
+
+Java Persistence Architecture (JPA)
+
+
+
+

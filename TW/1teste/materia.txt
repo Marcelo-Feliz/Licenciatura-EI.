@@ -1,0 +1,92 @@
+Web (ou World Wide Web) não é a Internet
+
+Web é um dos serviços que assenta na Internet 
+	Uma das formas de trocar informação entre computadores via rede
+	Segue normas particulares, no transporte, disponibilização e apresentação dos dados
+
+Exemplos de Servidor Web
+	Apache
+	Microsoft Internet Information Services (IIS)
+
+Exemplo de “pacotes” especializados para alojar conteúdos Web
+	LAMP: Linux, Apache, MySQL, and PHP
+	WAMP e MAMP (Windows ou Mac em vez de Linux)
+
+Web Site
+	É um recurso da Internet com páginas Web e outros ficheiros associados, relacionados com determinado assunto ou propósito
+
+Aplicação Web
+	(WebApp) é um software que é acedido com normas associadas à Web (usualmente via browser)
+	Mais complexo que o típico Web Site
+	Exemplos:
+		•Webmail: interface web do Hotmail ou Gmail
+		•Calendários, jogos, partilha de fotos
+		•Redes Sociais...
+
+Interaction Design (IxD)
+	Eficácia e eficiência, facilidade de uso
+User Interface (UI) design
+	Organização harmoniosa da estrutura das páginas e os seus componentes (menus, botões, links)
+User Experience (UX) design
+	Análise holística da experiência de utilização de um site, no seu todo, procurando uma experiência favorável
+	Considera os utilizadores, as suas necessidades e aptidões
+
+
+Relatórios sobre utilizadores
+	Necessidades, limitações, problemas
+Diagramas Wireframe
+	Esboço dos componentes e ligações, sem preocupação com aspeto
+Diagrama do Site
+	Foco nas ligações possíveis entre as páginas
+Storyboards
+	Cenários completos de interação, com views que ilustram os elementos visuais e os fluxos em/de cada estado
+
+
+
+#intro
+ID selector
+
+.class
+Class selector
+
+unidades absolutas
+px	pixel
+in	inches / polegada
+mm	milímetros
+cm	centímetros
+q 	1/4 milímetro
+pt	pontos (1/72 polegada)
+pc	pica (1 pica = 12 pontos = 1/6 polegada)
+
+Unidades Relativas
+em	igual ao tamanho de fonte atual (letra M)
+ex	x-height, altura da letra x
+rem	root em, tamanho da fonte no elemento html
+ch	zero width, tamanho do algarismo zero (0)
+vw	viewport width unit (1/100 da largura do viewport ou janela)
+vh	viewport height unit (1/100 da altura do viewport)
+vmin	viewport minimum unit (menor entre vh e vw)
+vmax	viewport maximum unit (maior entre vh e vw)
+
+
+Posicionamento
+	Static: disposição por omissão
+	Relative: deslocamento relativamente à posição natural do próprio elemento
+	Absolute: disposição do elemento em função da janela ou elemento em que se insere
+	Fixed: posição em relação à janela
+	Sticky: elemento é colocado normalmente, mas permanece fixo se existir deslocamento (scroll)
+
+stacking order
+	numero mais baixo fica em baixo
+
+Responsividade: qualidade do que é responsivo
+Responsivo: que reage ou responde de forma esperada ou apropriada em determinada situação
+
+WDResponsivo depende de:
+	Grelha flexível
+	Imagens Flexíveis
+	CSS media queries (mecanismo de interrogação ás condiçoesdo browser para uso de estilo e formatação mais adequado)
+
+srcset do elemento img serve para listar as alternativas da imagem com base na densidade de pixeis
+	O atributo src é obrigatório e indica a imagem por omissão
+

@@ -1,0 +1,190 @@
+ORM (Object-Relational Mapping)
+
+	Hibernate
+	
+	JPA(Java persistance architecture) é uma framework ORM para java
+
+Spring Data JPA
+	find...By, read...By, query...By, count...By, e get...By
+
+
+Tipos de vulnerabilidades:
+	Tecnicas:
+		●Relacionadas com a programação, ou com a configuração
+		●Exemplo: falta de SSL no envio de dados de login
+
+	Lógicas:
+		●Relacionadas com o modo de operação do serviço prestado pela aplicação
+		●Exemplo: usar parâmetros provenientes do cliente para calcular o preço a pagar
+
+Cross-Site Request Forgery
+	●Ataque que leva um browser com sessão ativa a efetuar pedidos HTTP (Request Forgery) no âmbito dessa mesma sessão válida à aplicação web.
+
+Sequestro de sessão (session hi-jacking)
+	●A partir de conteúdo de um cookie, ou de uma token de autenticação o atacante pode fazer-se passar pelo interlocutor de uma sessão ativa
+
+Cross-site scripting
+	●Levar o browser da vítima a executar código fornecido pelo atacante
+
+Tecnologias WebPhishing
+	●Tentar roubar os dados do utilizador:
+		Direcionar a vítima para introdução de credenciais nesse form
+		Reproduzir o look-and-feel da parte de login de um site Web popular
+
+
+
+
+
+
+
+
+
+Tipo de testes de desenvolvimento:
+	●Unitários – usualmente sobre uma função/método
+	●Integração – validação das interfaces entre módulos ou componentes de um sistema
+	●Sistémicos – teste ao sistema como um todo, realizando as operações que se esperam, para testar cada funcionalidade
+	●Aceitação – determinar se o software estão ou não pronto e em conformidade com...
+		●o interesse do utilizador/cliente
+		●a legislação
+		●o contratualizado
+		●os critérios para uma versão de produção, ou uma versão alpha...
+
+Testes á aplicação web:
+	●Funcionais
+	●Usabilidade
+	●Segurança
+	●Carga e desempenho
+	●Compatibilidade
+	●Acessibilidade
+
+Testes Funcionais
+
+	Verificação de diversos parâmetros relativos às funcionalidades da aplicação
+		●Hiperligações
+			●há links com problemas?
+		●Formulários
+			●preenchimento, mensagens de erro nos campos validados, armazenamento em BD
+		●Cookies
+			●o que acontece se forem eliminados?
+		●HTML e CSS
+			●sintaxe, conformidade com normas a usar
+		●Operações da aplicação
+			●usuais e sequências inesperadas
+	Podem ser manuais ou automatizados
+
+Testes de Usabilidade 
+
+	Verificar se o utilizador consegue utilizar a aplicação com sucesso e sem esforço desnecessário
+		●Aspetos a tratar
+			●Navegação (menus, botões, links) fácil de usar e coerente com o propósito
+			●Conteúdo
+				●Texto (o que tem e como é mostrado em vários cenários)
+				●Imagens (incluir representação alternativa, atributo ALT)
+				●Design coerente nas várias páginas
+				●Aspeto deve ser independente do browser
+				●Pode envolver utilizadores
+				●especializados
+				●grupos de pessoas (possivelmente organizadas em focus group)
+
+Testes de Segurança
+
+	Validar a não existência de falhas no controlo de acessos
+		●Testar formas de acesso não autorizado e confirmar que não são permitidas
+	Testar o uso de sessões de terceiros ou do próprio após logout ou expiração
+	Testar HTTPS e redirecionamentos, quando necessários
+
+
+Testes de Carga e Desempenho
+
+	Verificar o desempenho e eficácia do sistema em situações de carga
+		●Como varia o tempo de resposta com o nº de pedidos?
+		●Qual o ponto de rutura (nº de pedidos por segundo que leva o servidor a falhar)?
+		●Há risco de incoerência/erro em dados, em casos extremos?
+	Como é que o sistema recupera de um estado de inoperância por sobrecarga?
+	Avaliar a perceção que os utilizadores têm, ou não têm, quando o sistema entra em sobrecarga
+	Testar opções de compressão de dados para melhorar o tempo de carregamento 
+	Ferramentas:  JMeter  https://jmeter.apache.org/
+
+
+Testes de Compatibilidade 
+
+	Verificar compatibilidade com os vários browsers e plataformas (Sistema Operativo)
+	Validar a conformidade com normas da Web
+
+Testes de Acessibilidade
+
+	Garantir que a solução web pode ser usada por todas as pessoas
+		●Ou... impedir que alguns problemas (visuais, de audição, motores) impeçam uma pessoa de usar o serviço
+	Testes
+		●Funcionamento com leitores automáticos do conteúdo da janela
+		●Comportamento com ampliação da janela
+		●Ativação de alto contraste
+		●Ajustes dinâmicos do tamanho de letra
+		●Conformidade com norma WCAG
+	Algumas ferramentas
+		●AChecker - https://achecker.ca/checker/
+
+Automatização de testes
+	Algumas ferramentas
+		●Katalon
+		●Selenium
+
+
+Algumas opções de arquitetura
+
+	Solução multicamada simples
+
+	Replicação de servidores de frontend e balanceador de carga
+
+	Cache distribuída junto dos nós (servidores) de frontend
+
+
+Para pedidos com protocolo HTTPS (encriptado com SSL), há duas abordagens:
+	
+	- SSL termination: o tráfego é desencriptado pelo balanceador
+		- Diminui-se a carga sobre os servidores (não precisam desencriptar); ganhos de desempenho
+		
+		- Dependendo do ambiente onde se encontram balanceador e nós de frontend, pode haver preocupações de segurança, se canais de comunicação estiverem expostos
+
+	- SSL pass-through: pedidos são encaminhados como chegam
+		- O servidor web será responsável pelas operações criptográficas; o acréscimo de carga no CPU neste nó, que tem de processar o pedido, pode afetar o tempo de resposta
+
+		- Menos preocupações de segurança
+
+Algoritmos para balanceamento
+
+	Least Connection
+		●Encaminhar para o servidor com menos ligações ativas
+		●Especialmente em situações de ligações persistentes e pedidos não uniformes (que requerem tempo variável)
+	
+	Least Response Time
+		●Pedido encaminhado para o servidor com menos ligações ativas e o tempo de resposta médio mais baixo
+
+	Round Robin
+		●Distribuição sequencial, rotativa, do tráfego
+		●Útil quando não há ligações persistentes e o atendimento dos pedidos é rápido
+
+	IP Hash
+		●Usar o endereço IP do cliente como critério para escolher o servidor de destino
+
+
+nível de abstração superior
+	
+	Elasticidade
+		●Escala dinâmica, à medida que a carga varia no tempo
+		●A pool de servidores de frontend é sistematicamente monitorizada (health check), para reação rápida a falhas
+		●Se necessário, são adicionadas mais instâncias/servidores na pool, em resposta a um pico de pedidos
+
+	Critério geográfico
+		●Gerir o tráfego de uma aplicação web por área geográfica, por razões de eficiência e segurança
+		●Os pedidos com origem numa região são todos encaminhados para um centro de dados regional (que terá o seu balanceador de carga local)
+		●Estes centros comunicam para coordenação, sempre que necessário
+		●Exemplos: redes sociais
+
+sessões
+
+	A existência de vários servidores web traz um desafio para a manutenção da sessão de cada utilizador, ao longo de vários pedidos
+
+	Alternativas
+		a)O balanceador pode detetar sessões e escolher sempre o mesmo servidor para os pedidos daquela origem
+		b)As sessões podem passar para uma área comum a todos os nós de frontend (memória partilhada, BD, etc...) por forma que cada objeto sessão esteja disponível para todos, sem restrições ao modo de encaminhamento no balanceador.
